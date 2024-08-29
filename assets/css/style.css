@@ -133,6 +133,11 @@ textarea {
   font: inherit;
 }
 
+.logo-img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
 input,
 select,
 textarea { width: 100%; }
@@ -305,6 +310,8 @@ body {
   width: 100%;
   padding-block: 10px;
   z-index: 4;
+  align-items: center;
+  text-align: center;
 }
 
 .header-bottom.active {
@@ -434,6 +441,19 @@ body {
   color: var(--indian-yellow);
   font-size: 70px;
   line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  margin-bottom: 20px;
+}
+
+.service-card .card-icon .team-img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid var(--indian-yellow);
 }
 
 .service-card .card-title {
@@ -460,6 +480,18 @@ body {
 .service-card:is(:hover, :focus-within) .card-btn {
   background-color: var(--indian-yellow);
   color: var(--white);
+}
+
+
+@media (max-width: 768px) {
+  .service-card .card-icon {
+    height: 280px;
+  }
+  
+  .service-card .card-icon .team-img {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 
@@ -709,7 +741,8 @@ textarea.input-field {
   padding-block-end: 30px;
 }
 
-.footer-top { margin-block-end: 65px; }
+.footer-top { margin-block-end: 65px; 
+align-items: center;}
 
 .footer-brand {
   border: 1px solid var(--white_10);
@@ -720,6 +753,7 @@ textarea.input-field {
   text-align: center;
   padding: 25px;
   border-block-end: 1px solid var(--white_10);
+  align-items: center;
 }
 
 .footer .input-wrapper {
@@ -736,12 +770,14 @@ textarea.input-field {
   margin-block-end: 15px;
   color: inherit;
   outline: none;
+  align-items: center;
 }
 
 .footer .btn {
   max-width: 100%;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .footer-link-box {
@@ -756,6 +792,7 @@ textarea.input-field {
   font-weight: var(--fw-600);
   text-transform: uppercase;
   margin-block-end: 30px;
+  align-items: center;
 }
 
 .footer-link::before {
@@ -781,6 +818,7 @@ textarea.input-field {
   margin-block-start: 8px;
   transition: var(--transition-1);
 }
+
 
 .footer-link:is(:hover, :focus) { color: var(--white); }
 
@@ -935,6 +973,8 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     z-index: 4;
     background-color: var(--white);
     border-radius: 0 0 20px 20px;
+    align-items: center;
+    align-content: center;
   }
 
   .header-top-item:first-child {
